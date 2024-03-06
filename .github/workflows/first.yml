@@ -1,0 +1,10 @@
+name: deploy
+on: push
+jobs:
+  eslint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: npm ci
+      - name: Check eslint
+        run: npm lint
